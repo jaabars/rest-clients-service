@@ -31,5 +31,22 @@ public class Main {
          * создать метод который принимает объект класса клиент
          * и выводит сумму каждого товара со скидкой и общую сумму товаров в его корзине
          * */
+
+        calculateClientProductAmount(test);
+    }
+
+    public static void calculateClientProductAmount(Client client){
+
+        double totalSum = 0;
+        for (int i = 0; i < client.getCart().getClientProducts().length; i++){
+            ClientProduct clientProduct = client.getCart().getClientProducts()[i];
+
+            double sumWithoutDiscount = clientProduct.getPrice() * clientProduct.getQuantity();
+            double finalSum = sumWithoutDiscount - clientProduct.getDiscount() * clientProduct.getQuantity()  * sumWithoutDiscount/100;
+            clientProduct.setAmount(finalSum);
+            totalSum += finalSum;
+            System.out.println("Sum of "+ clientProduct.getName() + " " + clientProduct.getAmount());
+         }
+        System.out.println("Total sum is "+ totalSum);
     }
 }
