@@ -25,7 +25,7 @@ public class Main {
         Client test = new Client();
         test.setName("Abil");
         test.setEmail("abil@mail.ru");
-        test.setCart(new Cart(clientProducts));
+       // test.setCart(new Cart(clientProducts));
 
         /**
          * создать метод который принимает объект класса клиент
@@ -35,9 +35,9 @@ public class Main {
         calculateClientProductAmount(test);
     }
 
-    public static void calculateClientProductAmount(Client client){
+    public static void calculateClientProductAmount(Client client) {
 
-        double totalSum = 0;
+  /*      double totalSum = 0;
         for (int i = 0; i < client.getCart().getClientProducts().length; i++){
             ClientProduct clientProduct = client.getCart().getClientProducts()[i];
 
@@ -48,5 +48,6 @@ public class Main {
             System.out.println("Sum of "+ clientProduct.getName() + " " + clientProduct.getAmount());
          }
         System.out.println("Total sum is "+ totalSum);
+    }*/
     }
 }

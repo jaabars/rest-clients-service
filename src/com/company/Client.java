@@ -4,6 +4,8 @@ public class Client {
   private String name;
   private String email;
   private Cart cart;
+  public int agePrimitive;
+  public Integer ageObject;
 
   public String getName() {
     return name;

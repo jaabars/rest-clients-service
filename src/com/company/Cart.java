@@ -1,9 +1,12 @@
 package com.company;
 
-public class Cart {
-  private ClientProduct[] clientProducts;
+import java.util.List;
 
-  public Cart(ClientProduct[] clientProducts) {
+public class Cart {
+  //private ClientProduct[] clientProducts;
+  private List<ClientProduct> clientProductList;
+
+/*  public Cart(ClientProduct[] clientProducts) {
     this.clientProducts = clientProducts;
   }
 
@@ -13,5 +16,5 @@ public class Cart {
 
   public void setClientProducts(ClientProduct[] clientProducts) {
     this.clientProducts = clientProducts;
-  }
+  }*/
 }
